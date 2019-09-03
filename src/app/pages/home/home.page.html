@@ -1,0 +1,46 @@
+<ion-content>
+  <div class="ion-padding home__container">
+    <h1 class="home__title">Trivia Quiz</h1>
+    <ion-card routerLink="/game" routerDirection="root">
+      <ion-card-header>
+        <ion-card-title>Start New Game</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="play-circle"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card routerLink="/high-scores" routerDirection="forward">
+      <ion-card-header>
+        <ion-card-title>
+          Show Highscores
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="stats"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card routerLink="/credits" routerDirection="forward">
+      <ion-card-header>
+        <ion-card-title>
+          Credits
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="list"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="exitApp()">
+      <ion-card-header>
+        <ion-card-title>
+          Exit App
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-icon name="exit"></ion-icon>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
