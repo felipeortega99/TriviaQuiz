@@ -9,6 +9,6 @@ export class HomePage {
   constructor() {}
 
   exitApp() {
-    console.log("exit app");
+    navigator["app"].exitApp();
   }
 }

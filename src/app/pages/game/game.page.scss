@@ -1,0 +1,93 @@
+ion-title {
+  font-size: 25px;
+  padding: 0;
+  justify-content: center;
+  font-weight: 400;
+  background: linear-gradient(
+      to right,
+      #6d327c,
+      #485da6,
+      #00a1ba,
+      #00bf98,
+      #36c486
+    )
+    left bottom white no-repeat;
+  background-size: 100% 5px;
+}
+
+ion-card {
+  height: 310px;
+  background-color: white;
+  margin-top: 0;
+}
+
+ion-card-header {
+  height: 150px;
+}
+
+ion-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+ion-card-content {
+  padding: 0;
+}
+
+ion-icon {
+  font-size: 20px;
+}
+
+.game__container {
+  height: 100%;
+  background-color: #efefef;
+}
+
+.card__true-container:active {
+  background-color: rgba(21, 195, 154, 0.527);
+}
+
+.card__false-container:active {
+  background-color: rgba(194, 43, 20, 0.521);
+}
+
+.card__true-container,
+.card__false-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  border-top: 1px solid grey;
+  height: 80px;
+}
+
+.game__properties-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+
+.property__counter {
+  font-size: 20px;
+  color: #485da6;
+  font-weight: 500;
+}
+
+.couter__first-index {
+  color: #00a1ba;
+  font-weight: 600;
+}
+
+.property__timer-container {
+  font-size: 26px;
+}
+
+.timmer__time {
+  color: #485da6;
+}

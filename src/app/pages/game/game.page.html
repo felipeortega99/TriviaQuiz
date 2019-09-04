@@ -1,9 +1,34 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>game</ion-title>
+    <ion-title>{{ questions[index]?.category }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="game__container">
+    <div class="game__properties-container">
+      <span class="property__counter">
+        <span class="couter__first-index">{{ index + 1 }}</span>
+        / 15</span
+      >
+      <span class="property__timer-container">
+        <ion-icon name="stopwatch"></ion-icon>
+        <span class="timmer__time">{{ timer }}</span>
+      </span>
+    </div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ questions[index]?.question }}</ion-card-title>
+      </ion-card-header>
 
+      <ion-card-content>
+        <div class="card__true-container" (click)="setAnswer('True')">
+          True
+        </div>
+        <div class="card__false-container" (click)="setAnswer('False')">
+          False
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
