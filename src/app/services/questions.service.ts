@@ -34,9 +34,13 @@ export class QuestionsService {
     answers.forEach((value, index) => {
       this.answers.push({
         question: this.questions[index].question,
-        correct_answer: this.questions[index].correct_answer,
-        answer: value
+        isAnswerCorrect:
+          value === this.questions[index].correct_answer ? true : false
       });
     });
+  }
+
+  getQuizResult() {
+    return this.answers;
   }
 }

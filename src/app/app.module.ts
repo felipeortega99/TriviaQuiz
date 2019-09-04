@@ -11,6 +11,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+
+import { environment } from "src/environments/environment.prod";
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,7 +23,9 @@ import { AppRoutingModule } from "./app-routing.module";
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
     StatusBar,

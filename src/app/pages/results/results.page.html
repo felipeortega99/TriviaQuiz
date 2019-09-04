@@ -1,9 +1,57 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>results</ion-title>
+    <ion-title>My Results</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <div class="results__scores-cotainer">
+    <div class="score__container">
+      <span class="score__label">Points</span>
+      <span class="score__value">{{ points }}</span>
+    </div>
+    <div class="score__container">
+      <span class="score__label">Questions</span>
+      <span class="score__value">{{ numberOfCorrectAnswers }} / 15</span>
+    </div>
+  </div>
 
+  <ion-item class="input-username">
+    <ion-label position="floating" required
+      >Add Username<span>*</span>
+    </ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <div class="results__summary">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>SUMMARY</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let answer of answers">
+        <ion-label text-wrap>{{ answer.question }}</ion-label>
+        <ion-note slot="end" *ngIf="answer.isAnswerCorrect" color="success"
+          >100</ion-note
+        >
+        <ion-note slot="end" *ngIf="!answer.isAnswerCorrect" color="danger"
+          >0</ion-note
+        >
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="options__container">
+    <ion-button
+      color="success"
+      (click)="handlePlayAgain()"
+      [disabled]="username.length < 1"
+      >Play Again</ion-button
+    >
+    <ion-button
+      color="primary"
+      (click)="handleBackToHome()"
+      [disabled]="username.length < 1"
+      >Back to Home</ion-button
+    >
+  </div>
 </ion-content>

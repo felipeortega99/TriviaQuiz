@@ -1,0 +1,56 @@
+ion-title {
+  background: linear-gradient(
+      to right,
+      #6d327c,
+      #485da6,
+      #00a1ba,
+      #00bf98,
+      #36c486
+    )
+    left bottom white no-repeat;
+  background-size: 100% 5px;
+}
+
+.results__scores-cotainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+}
+
+.score__container {
+  width: 80px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.score__label {
+  font-weight: bold;
+}
+
+.score__value {
+  font-size: 20px;
+  font-weight: 500;
+  color: #00bf98;
+}
+
+.results__summary {
+}
+
+.options__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-username {
+  margin-bottom: 25px;
+  ion-label {
+    color: #485da6;
+    font-size: 20px;
+    font-weight: bold;
+    span {
+      color: #b30c0c;
+    }
+  }
+}
