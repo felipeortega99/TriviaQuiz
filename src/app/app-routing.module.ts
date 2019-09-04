@@ -9,7 +9,8 @@ const routes: Routes = [
       import("./pages/home/home.module").then(m => m.HomePageModule)
   },  { path: 'game', loadChildren: './pages/game/game.module#GamePageModule' },
   { path: 'results', loadChildren: './pages/results/results.module#ResultsPageModule' },
-  { path: 'highscores', loadChildren: './pages/highscores/highscores.module#HighscoresPageModule' }
+  { path: 'highscores', loadChildren: './pages/highscores/highscores.module#HighscoresPageModule' },
+  { path: 'credits', loadChildren: './pages/credits/credits.module#CreditsPageModule' }
 
 ];
 
