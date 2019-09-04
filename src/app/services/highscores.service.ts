@@ -1,9 +1,5 @@
 import { Injectable } from "@angular/core";
-import {
-  AngularFireDatabase,
-  AngularFireList,
-  AngularFireObject
-} from "@angular/fire/database";
+import { AngularFireDatabase } from "@angular/fire/database";
 import { Score } from "../interfaces/scores/score.interface";
 
 @Injectable({
@@ -23,7 +19,12 @@ export class HighscoresService {
     });
   }
 
-  addScore(score: Score) {
-    this.afDb.list("/highscores").push(score);
+  addScore(score: Score): Promise<any> {
+    return new Promise(resolve => {
+      this.afDb.database
+        .ref("highscores")
+        .push(score)
+        .then(() => resolve());
+    });
   }
 }

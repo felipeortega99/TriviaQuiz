@@ -31,17 +31,15 @@ export class ResultsPage implements OnInit {
   }
 
   handleBackToHome() {
-    this.submitScore();
-    this.navCtrl.navigateRoot("/home");
+    this.submitScore().then(() => this.navCtrl.navigateRoot("/home"));
   }
 
   handlePlayAgain() {
-    this.submitScore();
-    this.navCtrl.navigateRoot("/game");
+    this.submitScore().then(() => this.navCtrl.navigateRoot("/game"));
   }
 
   submitScore() {
-    this.highscoresService.addScore({
+    return this.highscoresService.addScore({
       username: this.username,
       score: this.points
     });
