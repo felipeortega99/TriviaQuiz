@@ -1,20 +1,3 @@
-ion-title {
-  font-size: 25px;
-  padding: 0;
-  justify-content: center;
-  font-weight: 400;
-  background: linear-gradient(
-      to right,
-      #6d327c,
-      #485da6,
-      #00a1ba,
-      #00bf98,
-      #36c486
-    )
-    left bottom white no-repeat;
-  background-size: 100% 5px;
-}
-
 ion-card {
   height: 310px;
   background-color: white;
@@ -70,7 +53,7 @@ ion-icon {
   justify-content: space-between;
   margin: 0 20px;
   padding-top: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
 
 .property__counter {

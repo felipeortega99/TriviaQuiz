@@ -31,6 +31,7 @@ export class QuestionsService {
   }
 
   setAnswers(answers: string[]) {
+    this.answers = [];
     answers.forEach((value, index) => {
       this.answers.push({
         question: this.questions[index].question,

@@ -1,20 +1,7 @@
-ion-title {
-  background: linear-gradient(
-      to right,
-      #6d327c,
-      #485da6,
-      #00a1ba,
-      #00bf98,
-      #36c486
-    )
-    left bottom white no-repeat;
-  background-size: 100% 5px;
-}
-
 .results__scores-cotainer {
   display: flex;
   justify-content: space-between;
-  padding: 10px 80px;
+  padding: 10px 30px;
 }
 
 .score__container {

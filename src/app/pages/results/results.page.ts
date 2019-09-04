@@ -24,7 +24,7 @@ export class ResultsPage implements OnInit {
     this.answers = [...this.questionsService.getQuizResult()];
     this.answers.forEach(value => {
       if (value.isAnswerCorrect) {
-        this.points++;
+        this.points = this.points + 100;
         this.numberOfCorrectAnswers++;
       }
     });
