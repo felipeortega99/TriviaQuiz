@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Highscores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 class="highscores__title">Top 10</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Username</ion-label>
+      <ion-note slot="end" color="primary">Score</ion-note>
+    </ion-item>
+    <ion-item *ngFor="let highscore of highscores">
+      <ion-label text-wrap>{{ highscore.username }}</ion-label>
+      <ion-note slot="end" color="success">{{ highscore.score }}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
